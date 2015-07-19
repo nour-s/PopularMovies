@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,7 +47,7 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = (View) inflater.inflate(R.layout.fragment_movies, container, false);
+        View view = inflater.inflate(R.layout.fragment_movies, container, false);
 
 
         imageAdapter = new ImageAdapter(getActivity());
@@ -55,7 +56,7 @@ public class MainActivityFragment extends Fragment {
         if (savedInstanceState != null)
         {
             ArrayList<Movie> m = savedInstanceState.getParcelableArrayList("key");
-            imageAdapter.addMovies(new HashSet<Movie>(m));
+            imageAdapter.addMovies(new HashSet<>(m));
         }
         else
         {
@@ -192,7 +193,14 @@ public class MainActivityFragment extends Fragment {
 
         @Override
         protected void onPostExecute(Collection<Movie> movies) {
-            if(movies != null) {
+            if (movies == null) {
+                Toast.makeText(
+                        getActivity(),
+                        getString(R.string.msg_server_error),
+                        Toast.LENGTH_SHORT
+                ).show();
+            }
+            else {
                 loadedPages++;
                 imageAdapter.addMovies(movies);
             }
