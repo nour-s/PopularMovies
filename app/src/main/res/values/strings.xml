@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Popular Movies by Nour Sabouny</string>
+    <string name="action_settings">Settings</string>
+    <string name="api_key" >3639feee3f4a2b60d98ab50fb77d56c7</string>
+    <string name="set_sorting_default" translatable="false">popular</string>
+    <string name="set_sorting_key" translatable="false">sorting</string>
+    <string name="set_sorting_label">Sort order</string>
+    <string name="api_image_default_size" >w342</string>
+    <string name="title_activity_movie_detail">Movie Detail</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movie_label_release_date" >Release Date:</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="set_sorting_most_popular">Most popular first</string>
+    <string name="set_sorting_high_rating">Highest-rated first</string>
+    <string name="set_sorting_value_popular" translatable="false">popular</string>
+    <string name="set_sorting_value_rating" translatable="false">top_rated</string>
+    <string name="set_sorting_default_value" translatable="false">popular</string>
+</resources>

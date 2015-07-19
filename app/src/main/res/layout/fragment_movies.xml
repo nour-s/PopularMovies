@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+<GridView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/gridview_movies"
+    android:columnWidth="@dimen/movieImage_width"
+    android:gravity="center"
+    android:stretchMode="spacingWidthUniform"
+    android:textAlignment="center"
+    android:verticalSpacing="@dimen/movieImage_padding"
+    android:numColumns="auto_fit"
+    tools:context=".MainActivityFragment"
+    >
+
+</GridView>
+
+</RelativeLayout>
